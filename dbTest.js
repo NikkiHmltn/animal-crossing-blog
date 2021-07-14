@@ -19,7 +19,7 @@ const villagerRory = new Villager({
     species: "Lion",
     birthday: "August 7th",
     personality: "Jock",
-    img: "https://static.wikia.nocookie.net/animalcrossing/images/d/db/Rory_NH.png/revision/latest/scale-to-width-down/301?cb=20200803113959"
+    img: "https://static.wikia.nocookie.net/animalcrossing/images/d/db/Rory_NH.png"
 })
 
 const villagerPashmina = new Villager({
@@ -27,7 +27,7 @@ const villagerPashmina = new Villager({
     species: "Goat",
     birthday: "December 26th",
     personality: "Uchi",
-    img: "https://static.wikia.nocookie.net/animalcrossing/images/3/3e/Pashmina_NH.png/revision/latest/scale-to-width-down/329?cb=20200802145815"
+    img: "https://static.wikia.nocookie.net/animalcrossing/images/3/3e/Pashmina_NH.png"
 })
 
 villagerRory.save((err) => {
@@ -37,5 +37,5 @@ villagerRory.save((err) => {
 
 villagerPashmina.save((err) => {
     if(err) console.log(err) 
-    else console.log("Rory saved!")
+    else console.log("Pashmina saved!")
 })

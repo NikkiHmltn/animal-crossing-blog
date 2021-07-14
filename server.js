@@ -10,8 +10,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended:false }))
 
 const indexRouter = require('./routes/index')
+const villagerRouter = require('./routes/villager')
 
 app.use('/', indexRouter)
+app.use("/villager", villagerRouter)
 
 app.listen(PORT || 8000, () => {
     console.log("Currenly playing 🎧 - KK Slider ")
