@@ -4,4 +4,4 @@ const indexControl = require('../controllers/index')
 
 router.get("/", indexControl.index)
 
-module.export = router;
+module.exports = router;
