@@ -9,12 +9,12 @@
 </head>
 <body>
     <h2>🍎 Welcome to Home! 🌼</h2>
+    <a href="/villager/movingin">New Resident!</a>
     <h4>Current Residents:</h4>
     <ul>
         <% villagers.forEach(villager => { %>
             <li><a href="/villager/<%= villager.name  %>"><%= villager.name %></a></li>
         <% }) %>
     </ul>
-    <a href="/villager/moving-in">New Resident!</a>
 </body>
 </html>

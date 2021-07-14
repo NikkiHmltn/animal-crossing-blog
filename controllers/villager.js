@@ -1,5 +1,9 @@
 const Villager = require('../models/villager')
 
+let moveVillager = (req, res) => {
+    res.render('addVillager')
+}
+
 let findOneVillager = (req, res) => {
     Villager.findOne({name: req.params.name}, (err, villager) => {
         console.log(villager)
@@ -9,7 +13,18 @@ let findOneVillager = (req, res) => {
     })
 }
 
+let addVillager = (req, res) => {
+    const villager = new Villager(req.body)
+    villager.save((err) => {
+        if (err) res.render("addVillager")
+        res.redirect("/")
+    })
+    
+}
+
 
 module.exports = {
+    moveVillager,
     findOneVillager,
+    addVillager,
 }
