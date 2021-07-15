@@ -19,7 +19,15 @@ let addVillager = (req, res) => {
         if (err) res.render("addVillager")
         res.redirect("/")
     })
-    
+}
+
+let deleteVillager = (req, res) => {
+    Villager.find({name: req.params.name}, (err, villager) => {
+        Villager.deleteOne()
+        .then(() =>{
+            res.redirect("/")
+        })
+    })
 }
 
 
@@ -27,4 +35,5 @@ module.exports = {
     moveVillager,
     findOneVillager,
     addVillager,
+    deleteVillager,
 }

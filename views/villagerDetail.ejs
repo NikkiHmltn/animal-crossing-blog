@@ -12,5 +12,9 @@
     <h4>Personality: <%= villager.personality %></h4>
     <h4>Species: <%= villager.species %></h4>
     <h4>Birthday: <%= villager.birthday %></h4>
+    <!-- update below -->
+    <form action="/villager/<%=villager.name%>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
 </body>
 </html>
